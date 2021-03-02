@@ -4,7 +4,7 @@
 
 1.
 ```
-npm install
+yarn install
 ```
 
 2. Create an OAuth App using the instructions [here](https://docs.github.com/en/developers/apps/authorizing-oauth-apps) and note down the `client_id` and `client_secret`
@@ -16,24 +16,24 @@ npm install
 ## Quick Project setup
 1.
 ```
-npm install
+yarn install
 ```
 
 2. Copy `.env.local.example` to `.env.local`
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn run serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn run build
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+yarn run lint
 ```
 
 ### Customize configuration
