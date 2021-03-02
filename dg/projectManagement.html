@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.18.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RepoSense - Project management</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/RepoSense/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/RepoSense/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header>
+      <navbar type="dark" placement="top" class="temp-navbar">
+        <a slot="brand" href="/RepoSense/index.html" title="Home" class="navbar-brand"><img width="30px" src="/RepoSense/favicon.ico"></a>
+        <li><a href="/RepoSense/index.html" class="nav-link">HOME</a></li>
+        <li><a href="/RepoSense/showcase.html" class="nav-link">SHOWCASE</a></li>
+        <li><a href="/RepoSense/ug/index.html" class="nav-link">USER GUIDE</a></li>
+        <li><a href="/RepoSense/dg/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
+        <li><a href="/RepoSense/about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="/RepoSense/contact.html" class="nav-link">CONTACT</a></li>
+        <li tags="dev"><a href="https://reposense.org" class="nav-link" target="_blank"><span><span aria-hidden="true" class="fas fa-external-link-alt"></span> PRODUCTION SITE</span></a></li>
+        <li><a href="https://github.com/RepoSense/reposense" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <p><span class="lead"><strong><strong>DEVELOPER GUIDE</strong></strong></span></p>
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/index.html"><strong>Contributing</strong></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/settingUp.html"><strong>Setting up</strong></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/workflow.html"><strong>Workflow</strong></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design and implementation</strong>
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
+              </div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/architecture.html">Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/report.html">HTML report</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/projectManagement.html" class="current"><strong>Project management</strong></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Appendices</strong>
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
+              </div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/RepoSense/dg/styleGuides.html">Style guides</a></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <div id="content-wrapper">
+        <div></div>
+        <h1 class="display-4" id="project-management"><span id="project-management" class="anchor"></span><span>Project management</span><a class="fa fa-anchor" href="#project-management" onclick="event.stopPropagation()"></a></h1>
+        <div class="lead">
+          <p>This page contains information about project management tasks. The target audience is senior developers (and above).</p>
+        </div>
+
+        <h2 id="merging-prs"><span id="merging-prs" class="anchor"></span>Merging PRs<a class="fa fa-anchor" href="#merging-prs" onclick="event.stopPropagation()"></a></h2>
+        <ul>
+          <li><strong>Use the 'squash and merge' option</strong> unless the situation warrants a different option.</li>
+          <li><strong>For the merge commit</strong>, follow conventions at <a href="https://se-education.org/guides/conventions/github.html"><em>GitHub conventions</em> @SE-EDU</a>.</li>
+        </ul>
+
+        <h2 id="deploying-the-production-website"><span id="deploying-the-production-website" class="anchor"></span>Deploying the production website<a class="fa fa-anchor" href="#deploying-the-production-website" onclick="event.stopPropagation()"></a></h2>
+        <p>We have two versions of the website:</p>
+        <ol>
+          <li><strong>Production website</strong> at <a href="https://reposense.org">https://reposense.org</a>
+            <ul>
+              <li>matches the latest released version</li>
+              <li>deployed manually after each new release</li>
+            </ul>
+          </li>
+          <li><strong>Dev website</strong> at <a href="https://reposense.org/RepoSense">https://reposense.org/RepoSense</a>
+            <ul>
+              <li>matches the latest <code class="hljs inline no-lang" v-pre>master</code> branch</li>
+              <li>deployed automatically by Travis whenever the <code class="hljs inline no-lang" v-pre>master</code> branch is updated</li>
+            </ul>
+          </li>
+        </ol>
+        <p>The production website differs from the dev website in some ways, e.g.,</p>
+        <ul>
+          <li>It has a <code class="hljs inline no-lang" v-pre>CNAME</code> file (to indicate that it is the target destination for the <code class="hljs inline no-lang" v-pre>reposense.org</code> domain name)</li>
+          <li>Its DG pages show a warning that it is not the latest version of the DG.</li>
+        </ul>
+        <p>MarkBind mainly manages these variations via the <code class="hljs inline no-lang" v-pre>site.config</code> file. That is why the <code class="hljs inline no-lang" v-pre>site.config</code> file in the <code class="hljs inline no-lang" v-pre>release</code> branch is slightly different from the one in the <code class="hljs inline no-lang" v-pre>master</code> branch.</p>
+        <p>After each release, do the following steps to deploy the production website:</p>
+        <ol>
+          <li>Switch to the <code class="hljs inline no-lang" v-pre>release</code> branch</li>
+          <li><code class="hljs inline no-lang" v-pre>cd docs</code></li>
+          <li><code class="hljs inline no-lang" v-pre>markbind build</code></li>
+          <li><code class="hljs inline no-lang" v-pre>markbind deploy</code></li>
+          <li>After a few minutes, check <a href="https://markbind.org">https://markbind.org</a> to ensure it has been updated as intended.</li>
+        </ol>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+      </div>
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#project-management">Project management&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#merging-prs">Merging PRs&#x200E;</a>
+              <a class="nav-link py-1" href="#deploying-the-production-website">Deploying the production website&#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.0</a>, generated on Tue, Mar 2, 2021, 1:26:23 PM UTC]</small>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/RepoSense'
+  MarkBind.setupWithSearch()
+</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>
