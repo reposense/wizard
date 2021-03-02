@@ -6,16 +6,20 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "lintfix": "eslint --fix **/*.vue **/*.js"
+    "lintfix": "eslint --fix **/*.vue **/*.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@octokit/core": "^3.2.5",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
     "tweetsodium": "0.0.4",
     "vue": "^2.6.12",
     "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.12",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

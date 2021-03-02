@@ -31,6 +31,11 @@ yarn run serve
 yarn run build
 ```
 
+## Quick Project deployment to gh-pages
+```
+yarn run deploy
+```
+
 ### Lints and fixes files
 ```
 yarn run lint
