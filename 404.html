@@ -13,7 +13,7 @@
         .querySelector('#meta-location')
         .setAttribute(
           'content', 
-          `0;${document.URL.substr(document.URL.indexOf('/'))}`
+          `0;${window.location.pathname.substr(0, window.location.pathname.lastIndexOf('/'))}`
         );
     </script>
   </head>
